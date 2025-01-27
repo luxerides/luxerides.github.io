@@ -7,237 +7,228 @@
     <style>
         /* General Reset */
         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: 'Arial', sans-serif;
-    color: #fff;
-    background-color: #000;
-    line-height: 1.6;
-}
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background-color: #000;
+            line-height: 1.6;
+        }
 
-/* Header */
-header {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-header .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-header .nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
+        header .logo img {
+            max-width: 140px;
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Center the logo */
+        }
 
-header .nav-links li a:hover {
-    color: #ff9800;
-}
+        header .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
 
-header .btn {
-    background: #ff9800;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
+        header .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
 
-header .btn:hover {
-    background: #e68900;
-}
+        header .nav-links li a:hover {
+            color: #ff9800;
+        }
 
-/* Hero Section */
-.hero {
-    background: url('https://github.com/luxerides/luxerides.github.io/raw/main/images/city.jpg') no-repeat center center/cover;
+        /* Hero Section */
+        .hero {
+            background: url('https://github.com/luxerides/luxerides.github.io/raw/main/images/city.jpg') no-repeat center center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            transition: background 2s ease-in-out;
+        }
 
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem;
-    position: relative;
-    transition: background 2s ease-in-out;
-}
+        .hero:hover {
+            background: url('https://github.com/luxerides/luxerides.github.io/raw/main/images/city2.jpg') no-repeat center center/cover;
+        }
 
-.hero:hover {
-    background: url('https://github.com/luxerides/luxerides.github.io/raw/main/images/city2.jpg') no-repeat center center/cover;
-}
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
 
-.hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-}
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #ff9800;
+        }
 
-.hero h2 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    color: #ff9800;
-}
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
 
-.hero p {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-}
+        .hero .cta-button {
+            background: #ff9800;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            transition: background 0.3s ease;
+        }
 
-.hero .cta-button {
-    background: #ff9800;
-    color: #fff;
-    padding: 0.8rem 2rem;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 30px;
-    transition: background 0.3s ease;
-}
+        .hero .cta-button:hover {
+            background: #e68900;
+        }
 
-.hero .cta-button:hover {
-    background: #e68900;
-}
+        /* Footer */
+        footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+        }
 
-/* Footer */
-footer {
-    background: #111;
-    color: #fff;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 2rem;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
-}
+        footer p {
+            margin-bottom: 1rem;
+        }
 
-footer p {
-    margin-bottom: 1rem;
-}
+        footer .social-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
 
-footer .social-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
+        footer .social-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
 
-footer .social-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
+        footer .social-links li a:hover {
+            color: #ff9800;
+        }
 
-footer .social-links li a:hover {
-    color: #ff9800;
-}
+        /* Media Queries for responsiveness */
+        @media (max-width: 1024px) {
+            header .nav-links {
+                gap: 1rem; /* Adjust the gap for tablet screens */
+            }
 
-/* Media Queries for responsiveness */
-@media (max-width: 1024px) {
-    header .nav-links {
-        gap: 1rem; /* Adjust the gap for tablet screens */
-    }
+            .hero h2 {
+                font-size: 3rem; /* Slightly smaller heading for tablets */
+            }
 
-    .hero h2 {
-        font-size: 3rem; /* Slightly smaller heading for tablets */
-    }
+            .hero p {
+                font-size: 1.2rem; /* Adjust paragraph font size */
+            }
 
-    .hero p {
-        font-size: 1.2rem; /* Adjust paragraph font size */
-    }
+            .hero .cta-button {
+                font-size: 1.1rem; /* Adjust button font size */
+                padding: 0.7rem 1.8rem; /* Adjust padding */
+            }
 
-    .hero .cta-button {
-        font-size: 1.1rem; /* Adjust button font size */
-        padding: 0.7rem 1.8rem; /* Adjust padding */
-    }
+            footer .social-links {
+                gap: 1rem; /* Adjust gap between social links */
+            }
+        }
 
-    footer .social-links {
-        gap: 1rem; /* Adjust gap between social links */
-    }
-}
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem; /* Reduce header padding for smaller screens */
+            }
 
-@media (max-width: 768px) {
-    header {
-        padding: 1rem; /* Reduce header padding for smaller screens */
-    }
+            header .nav-links {
+                flex-direction: column; /* Stack navigation items vertically */
+                align-items: center;
+                gap: 1rem;
+            }
 
-    header .nav-links {
-        flex-direction: column; /* Stack navigation items vertically */
-        align-items: center;
-        gap: 1rem;
-    }
+            .hero h2 {
+                font-size: 2.5rem; /* Smaller heading for smaller screens */
+            }
 
-    .hero h2 {
-        font-size: 2.5rem; /* Smaller heading for smaller screens */
-    }
+            .hero p {
+                font-size: 1rem; /* Adjust paragraph font size */
+            }
 
-    .hero p {
-        font-size: 1rem; /* Adjust paragraph font size */
-    }
+            .hero .cta-button {
+                font-size: 1rem; /* Adjust button font size */
+                padding: 0.6rem 1.5rem; /* Adjust padding */
+            }
 
-    .hero .cta-button {
-        font-size: 1rem; /* Adjust button font size */
-        padding: 0.6rem 1.5rem; /* Adjust padding */
-    }
+            footer .social-links {
+                gap: 1rem; /* Adjust gap for smaller screens */
+            }
+        }
 
-    footer .social-links {
-        gap: 1rem; /* Adjust gap for smaller screens */
-    }
-}
+        @media (max-width: 480px) {
+            header {
+                padding: 0.8rem; /* Even smaller padding */
+            }
 
-@media (max-width: 480px) {
-    header {
-        padding: 0.8rem; /* Even smaller padding */
-    }
+            header .nav-links {
+                gap: 0.8rem; /* Adjust gap further */
+            }
 
-    header .nav-links {
-        gap: 0.8rem; /* Adjust gap further */
-    }
+            .hero h2 {
+                font-size: 2rem; /* Further reduce heading size */
+            }
 
-    .hero h2 {
-        font-size: 2rem; /* Further reduce heading size */
-    }
+            .hero p {
+                font-size: 0.9rem; /* Adjust paragraph font size */
+            }
 
-    .hero p {
-        font-size: 0.9rem; /* Adjust paragraph font size */
-    }
+            .hero .cta-button {
+                font-size: 0.9rem; /* Adjust button font size */
+                padding: 0.5rem 1.2rem; /* Adjust padding */
+            }
 
-    .hero .cta-button {
-        font-size: 0.9rem; /* Adjust button font size */
-        padding: 0.5rem 1.2rem; /* Adjust padding */
-    }
-
-    footer .social-links {
-        gap: 0.8rem; /* Further reduce gap between social links */
-    }
-}
-
+            footer .social-links {
+                gap: 0.8rem; /* Further reduce gap between social links */
+            }
+        }
     </style>
 </head>
 <body>
@@ -245,13 +236,8 @@ footer .social-links li a:hover {
     <header>
         <nav>
             <div class="logo">
-            <header>
-    <div class="logo">
-        <img src="https://github.com/luxerides/luxerides.github.io/raw/main/images/logo.jpg" alt="Luxe Ride Chauffeur Logo" style="max-width: 120px; height: auto;">
-    </div>
-</header>
-
-
+                <!-- Inline style for the logo -->
+                <img src="https://github.com/luxerides/luxerides.github.io/raw/main/images/logo.jpg" alt="Luxe Ride Chauffeur Logo">
             </div>
             <ul class="nav-links">
                 <li><a href="service.html">Services</a></li>
