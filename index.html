@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Ride Chauffeur</title>
+    <style>
+        /* General Reset */
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #000;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    max-width: 140px;
+    height: auto;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header .nav-links li a:hover {
+    color: #ff9800;
+}
+
+header .btn {
+    background: #ff9800;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+header .btn:hover {
+    background: #e68900;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://github.com/luxerides/luxerides.github.io/raw/main/images/city.jpg') no-repeat center center/cover;
+
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    transition: background 2s ease-in-out;
+}
+
+.hero:hover {
+    background: url('https://github.com/luxerides/luxerides.github.io/raw/main/images/city2.jpg') no-repeat center center/cover;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #ff9800;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.hero .cta-button {
+    background: #ff9800;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+}
+
+.hero .cta-button:hover {
+    background: #e68900;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+footer .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+footer .social-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+footer .social-links li a:hover {
+    color: #ff9800;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    header .nav-links {
+        gap: 1rem; /* Adjust the gap for tablet screens */
+    }
+
+    .hero h2 {
+        font-size: 3rem; /* Slightly smaller heading for tablets */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Adjust paragraph font size */
+    }
+
+    .hero .cta-button {
+        font-size: 1.1rem; /* Adjust button font size */
+        padding: 0.7rem 1.8rem; /* Adjust padding */
+    }
+
+    footer .social-links {
+        gap: 1rem; /* Adjust gap between social links */
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem; /* Reduce header padding for smaller screens */
+    }
+
+    header .nav-links {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem; /* Smaller heading for smaller screens */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+
+    .hero .cta-button {
+        font-size: 1rem; /* Adjust button font size */
+        padding: 0.6rem 1.5rem; /* Adjust padding */
+    }
+
+    footer .social-links {
+        gap: 1rem; /* Adjust gap for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.8rem; /* Even smaller padding */
+    }
+
+    header .nav-links {
+        gap: 0.8rem; /* Adjust gap further */
+    }
+
+    .hero h2 {
+        font-size: 2rem; /* Further reduce heading size */
+    }
+
+    .hero p {
+        font-size: 0.9rem; /* Adjust paragraph font size */
+    }
+
+    .hero .cta-button {
+        font-size: 0.9rem; /* Adjust button font size */
+        padding: 0.5rem 1.2rem; /* Adjust padding */
+    }
+
+    footer .social-links {
+        gap: 0.8rem; /* Further reduce gap between social links */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://github.com/luxerides/luxerides.github.io/raw/main/images/logo.jpg" alt="Luxe Ride Chauffeur Logo">
+
+            </div>
+            <ul class="nav-links">
+                <li><a href="service.php">Services</a></li>
+                <li><a href="about.php">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Ride in Luxury, Arrive in Style</h2>
+            <p>Experience premium chauffeur services tailored to your needs.</p>
+            <a href="register.php" class="cta-button">Register Here</a>
+            <a href="login.php" class="cta-button">Login</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Luxe Ride Chauffeur. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
